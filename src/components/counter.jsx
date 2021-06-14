@@ -10,16 +10,15 @@ class Counter extends Component {
         super(props);
         console.log('constructor: ', this);
         this.handleIncrement = this.handleIncrement.bind(this);
-        // this.handleDecrement = this.handleDecrement.bind(this);
     }
 
     render(){
         return (
             <div className='counter-component'>
-                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary'>Increment</button>
-                <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary'>Decrement</button>
-                <button onClick={() => this.handlePassingArg({id: 1})} className='btn btn-sm btn-secondary'>Passing Arg</button>
+                <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary control'>Increment</button>
+                <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary control'>Decrement</button>
+                <button onClick={() => this.handlePassingArg({id: 1})} className='btn btn-sm btn-secondary control'>Passing Arg</button>
                 <ul>
                     {this.state.tags.length === 0 && 'Please create a new tag!'}
                     {this.renderTags()}
