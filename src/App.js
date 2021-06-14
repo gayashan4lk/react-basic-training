@@ -1,9 +1,13 @@
 import './App.css';
 import Counter from "./components/counter";
+import TagList from "./components/taglist";
 
 function App() {
   return (
-    <Counter/>
+      <div>
+          <Counter/>
+          <TagList/>
+      </div>
   );
 }
 

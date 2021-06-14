@@ -1,10 +1,23 @@
-.counter-component {
+.counter-container {
   background-color: antiquewhite;
   padding: 10px 30px;
   width: fit-content;
   border: #9f9f9f solid 2px;
   border-radius: 10px;
   margin: 10px 0;
+}
+
+.tag-list-container {
+  background-color: lightgreen;
+  padding: 10px 30px;
+  width: fit-content;
+  border: #9f9f9f solid 2px;
+  border-radius: 10px;
+  margin: 10px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+
 }
 
 #number-label {

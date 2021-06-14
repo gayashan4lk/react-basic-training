@@ -3,7 +3,6 @@ import React, {Component} from "react";
 class Counter extends Component {
     state = {
         count : 0,
-        tags: ['tag1', 'tag2', 'tag3']
     }
 
     constructor(props) {
@@ -14,15 +13,10 @@ class Counter extends Component {
 
     render(){
         return (
-            <div className='counter-component'>
+            <div className='counter-container'>
                 <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary control'>Increment</button>
                 <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary control'>Decrement</button>
-                <button onClick={() => this.handlePassingArg({id: 1})} className='btn btn-sm btn-secondary control'>Passing Arg</button>
-                <ul>
-                    {this.state.tags.length === 0 && 'Please create a new tag!'}
-                    {this.renderTags()}
-                </ul>
             </div>
         );
     }
@@ -37,13 +31,7 @@ class Counter extends Component {
         return classes;
     }
 
-    renderTags() {
-        if (this.state.tags.length === 0) {
-            return <p>There are no tags!</p>;
-        } else {
-            return this.state.tags.map((tag) => <li key={tag}>{tag}</li>);
-        }
-    }
+
 
     handleIncrement() {
         console.log('Increment clicked : ', this);
@@ -55,10 +43,6 @@ class Counter extends Component {
         console.log('Decrement clicked : ', this);
         let x = this.state.count - 1;
         this.setState({count: x});
-    }
-
-    handlePassingArg = (product) => {
-        console.log(product);
     }
 }
 
