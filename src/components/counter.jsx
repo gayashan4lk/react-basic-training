@@ -10,7 +10,7 @@ class Counter extends Component {
         super(props);
         console.log('constructor: ', this);
         this.handleIncrement = this.handleIncrement.bind(this);
-        this.handleDecrement = this.handleDecrement.bind(this);
+        // this.handleDecrement = this.handleDecrement.bind(this);
     }
 
     render(){
@@ -19,6 +19,7 @@ class Counter extends Component {
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary'>Increment</button>
                 <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary'>Decrement</button>
+                <button onClick={() => this.handlePassingArg({id: 1})} className='btn btn-sm btn-secondary'>Passing Arg</button>
                 <ul>
                     {this.state.tags.length === 0 && 'Please create a new tag!'}
                     {this.renderTags()}
@@ -51,10 +52,14 @@ class Counter extends Component {
         this.setState({count: x});
     }
 
-    handleDecrement() {
+    handleDecrement = () => {
         console.log('Decrement clicked : ', this);
         let x = this.state.count - 1;
         this.setState({count: x});
+    }
+
+    handlePassingArg = (product) => {
+        console.log(product);
     }
 }
 
