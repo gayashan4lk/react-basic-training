@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Counter from "./counter";
+import Card from "./card";
 
-class Counters extends Component {
+class Cards extends Component {
     state = {
         counters: [
             {id : 0, value: 12, title: 'Gayashan'},
@@ -18,18 +18,18 @@ class Counters extends Component {
 
     render() {
         return (
-            <div>
+            <div className='counters-main-container'>
                 {this.state.counters.map(counter =>
-                    /*<Counter key={counter.id} onDelete={this.handleDelete} id={counter.id} value={counter.value} selected={true} >
+                    /*<Card key={counter.id} onDelete={this.handleDelete} id={counter.id} value={counter.value} selected={true} >
                         {/!*passing children*!/}
                         <h5>Id : {counter.id} , Name : {counter.title}</h5>
-                    </Counter>*/
+                    </Card>*/
 
                     // Passing all the counter object as props
-                    <Counter key={counter.id} counter={counter} onDelete={this.handleDelete}>
+                    <Card key={counter.id} counter={counter} onDelete={this.handleDelete}>
                         {/*passing children*/}
                         <h5>Id : {counter.id} , Name : {counter.title}</h5>
-                    </Counter>
+                    </Card>
                 )}
             </div>
         );
@@ -43,4 +43,4 @@ class Counters extends Component {
 
 }
 
-export default Counters;
+export default Cards;

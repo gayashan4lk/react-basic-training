@@ -1,11 +1,11 @@
 import './App.css';
-import Counters from "./components/counters";
+import Cards from "./components/cards";
 import TagList from "./components/taglist";
 
 function App() {
   return (
       <div>
-          <Counters/>
+          <Cards/>
           <TagList/>
       </div>
   );

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Counter extends Component {
+class Card extends Component {
     state = {
         value : this.props.counter.value,
     }
@@ -56,4 +56,4 @@ class Counter extends Component {
     }
 }
 
-export default Counter;
+export default Card;
