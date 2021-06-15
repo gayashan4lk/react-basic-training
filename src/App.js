@@ -29,6 +29,7 @@ class App extends Component {
                         onDecrement={this.handleDecrement}
                         onDelete={this.handleDelete}
                         />
+                    <hr className='m-4'/>
                     <Cards/>
                     <TagList/>
                 </main>
