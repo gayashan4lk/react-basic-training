@@ -7,14 +7,14 @@ class Card extends Component {
 
     constructor(props) {
         super(props);
-        console.log('constructor: ', this);
+        // console.log('constructor: ', this);
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleSetZero = this.handleSetZero.bind(this);
     }
 
     render(){
-        console.log('props : ', this.props);
-        console.log('counter object as props: ', this.props.counter);
+        // console.log('props : ', this.props);
+        // console.log('counter object as props: ', this.props.counter);
         return (
             <div className='card-container'>
                 {/*rendering children*/}
@@ -39,19 +39,19 @@ class Card extends Component {
     }
 
     handleIncrement() {
-        console.log('Increment clicked : ', this);
+        // console.log('Increment clicked : ', this);
         let x = this.state.value + 1;
         this.setState({value: x});
     }
 
     handleDecrement = () => {
-        console.log('Decrement clicked : ', this);
+        // console.log('Decrement clicked : ', this);
         let x = this.state.value - 1;
         this.setState({value: x});
     }
 
     handleSetZero() {
-        console.log('SetZero clicked : ', this);
+        // console.log('SetZero clicked : ', this);
         this.setState({value: 0});
     }
 }

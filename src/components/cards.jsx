@@ -36,7 +36,7 @@ class Cards extends Component {
     }
 
     handleDelete(counterID) {
-        console.log('event handler called', counterID);
+        // console.log('event handler called', counterID);
         const counters = this.state.counters.filter(c => c.id !== counterID);
         this.setState({counters:counters});
     }
