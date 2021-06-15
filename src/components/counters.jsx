@@ -14,14 +14,19 @@ class Counters extends Component {
         return (
             <div>
                 {this.state.counters.map(counter =>
-                    <Counter key={counter.id} value={counter.value} selected={true}>
+                    <Counter key={counter.id} onDelete={this.handleDelete} value={counter.value} selected={true}>
                         {/*passing children*/}
-                        <h4>{counter.title}</h4>
+                        <h5>Name : {counter.title}</h5>
                     </Counter>
                 )}
             </div>
         );
     }
+
+    handleDelete(counterID) {
+        console.log('event handler called', counterID);
+    }
+
 }
 
 export default Counters;
