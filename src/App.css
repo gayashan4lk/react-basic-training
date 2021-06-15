@@ -1,3 +1,12 @@
+.counters-main-container {
+  background-color: #f5edbe;
+  padding: 10px 30px;
+  width: fit-content;
+  border: #a7998e solid 2px;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+
 .cards-main-container {
   background-color: lightgray;
   padding: 10px 30px;
