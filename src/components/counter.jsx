@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 class Counter extends Component {
     state = {
-        count : 0,
+        value : this.props.value,
     }
 
     constructor(props) {
@@ -13,6 +13,7 @@ class Counter extends Component {
     }
 
     render(){
+        console.log('props : ', this.props);
         return (
             <div className='counter-container'>
                 <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -24,29 +25,30 @@ class Counter extends Component {
     }
 
     formatCount() {
-        return this.state.count === 0 ? <h1>Zero</h1> : <h1>{this.state.count}</h1>;
+        return this.state.value === 0 ? <h1>Zero</h1> : <h1>{this.state.value}</h1>;
     }
 
     getBadgeClasses() {
         let classes = 'badge m-2 badge-';
-        classes += this.state.count === 0 ? 'warning' : 'primary';
+        classes += this.state.value === 0 ? 'warning' : 'primary';
         return classes;
     }
 
     handleIncrement() {
         console.log('Increment clicked : ', this);
-        let x = this.state.count + 1;
-        this.setState({count: x});
+        let x = this.state.value + 1;
+        this.setState({value: x});
     }
 
     handleDecrement = () => {
         console.log('Decrement clicked : ', this);
-        let x = this.state.count - 1;
-        this.setState({count: x});
+        let x = this.state.value - 1;
+        this.setState({value: x});
     }
 
     handleSetZero() {
-        this.setState({count: 0});
+        console.log('SetZero clicked : ', this);
+        this.setState({value: 0});
     }
 }
 

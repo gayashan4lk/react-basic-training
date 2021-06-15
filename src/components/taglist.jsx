@@ -26,7 +26,8 @@ class TagList extends Component {
     }
 
     handlePassingArg = (product) => {
-        console.log(product);
+        console.log('product : ', product);
+        // console.log(JSON.stringify(product));
     }
 }
 
