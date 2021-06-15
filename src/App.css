@@ -1,4 +1,4 @@
-.counters-main-container {
+.cards-main-container {
   background-color: lightgray;
   padding: 10px 30px;
   width: fit-content;
@@ -10,7 +10,7 @@
   right: 0;
 }
 
-.counter-container {
+.card-container {
   background-color: antiquewhite;
   padding: 10px 30px;
   width: fit-content;

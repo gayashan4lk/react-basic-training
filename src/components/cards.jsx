@@ -18,7 +18,7 @@ class Cards extends Component {
 
     render() {
         return (
-            <div className='counters-main-container'>
+            <div className='cards-main-container'>
                 {this.state.counters.map(counter =>
                     /*<Card key={counter.id} onDelete={this.handleDelete} id={counter.id} value={counter.value} selected={true} >
                         {/!*passing children*!/}

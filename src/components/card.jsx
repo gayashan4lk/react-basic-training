@@ -16,7 +16,7 @@ class Card extends Component {
         console.log('props : ', this.props);
         console.log('counter object as props: ', this.props.counter);
         return (
-            <div className='counter-container'>
+            <div className='card-container'>
                 {/*rendering children*/}
                 {this.props.children}
                 <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
