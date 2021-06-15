@@ -20,9 +20,9 @@ class Counter extends Component {
                 {/*rendering children*/}
                 {this.props.children}
                 <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary my-btn'>Increment</button>
+                <button onClick={this.handleIncrement} className='btn btn-sm btn-success my-btn'>Increment</button>
                 <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary my-btn'>Decrement</button>
-                <button onClick={this.handleSetZero} className='btn btn-sm btn-secondary my-btn'>Set Zero</button>
+                <button onClick={this.handleSetZero} className='btn btn-sm btn-warning my-btn'>Set Zero</button>
                 <button onClick={() => {this.props.onDelete(this.props.counter.id)}} className="btn btn-danger btn-sm m-2">Delete</button>
             </div>
         );
