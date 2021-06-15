@@ -9,14 +9,16 @@ class Counter extends Component {
         super(props);
         console.log('constructor: ', this);
         this.handleIncrement = this.handleIncrement.bind(this);
+        this.handleSetZero = this.handleSetZero.bind(this);
     }
 
     render(){
         return (
             <div className='counter-container'>
                 <span id='number-label' className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary control'>Increment</button>
-                <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary control'>Decrement</button>
+                <button onClick={this.handleIncrement} className='btn btn-sm btn-secondary my-btn'>Increment</button>
+                <button onClick={this.handleDecrement} className='btn btn-sm btn-secondary my-btn'>Decrement</button>
+                <button onClick={this.handleSetZero} className='btn btn-sm btn-secondary my-btn'>Set Zero</button>
             </div>
         );
     }
@@ -31,8 +33,6 @@ class Counter extends Component {
         return classes;
     }
 
-
-
     handleIncrement() {
         console.log('Increment clicked : ', this);
         let x = this.state.count + 1;
@@ -43,6 +43,10 @@ class Counter extends Component {
         console.log('Decrement clicked : ', this);
         let x = this.state.count - 1;
         this.setState({count: x});
+    }
+
+    handleSetZero() {
+        this.setState({count: 0});
     }
 }
 
