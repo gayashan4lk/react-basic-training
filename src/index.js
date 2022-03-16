@@ -6,5 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'fontawesome-4.7/css/font-awesome.min.css'
 
 ReactDOM.render(
-    <App/> , document.getElementById('root')
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
+     document.getElementById('root')
 );

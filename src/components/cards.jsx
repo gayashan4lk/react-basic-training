@@ -4,10 +4,10 @@ import Card from "./card";
 class Cards extends Component {
     state = {
         counters: [
-            {id : 0, value: 12, title: 'Gayashan'},
-            {id : 1, value: 5, title: 'Wagachchi'},
-            {id : 1458, value: 9, title: 'Bhagya'},
-            {id : 3664, value: 10, title: 'Arunodanie'}
+            {id : 0, value: 12, title: 'One'},
+            {id : 1, value: 5, title: 'Two'},
+            {id : 1458, value: 9, title: 'Three'},
+            {id : 3664, value: 10, title: 'Four'}
         ]
     }
 
